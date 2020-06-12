@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<link rel="stylesheet" href="/static/style.css" type="text/css">
+<head>
+	<meta charset="UTF-8">
+	<title>Diabetes prediction</title>
+</head>
+
+<body>
+	<div class="main">
+		<center>
+			<h1>HEART DISEASE PREDICTION</h1>
+			<div class="row">
+					<ul class="main-nav">
+		  			<li><a class="active" href="{{ url_for('homePage')}}">Single Patient</a></li>
+		  			<li><a class="active" href="{{ url_for('bulkpredict')}}">Many Patients</a></li>
+					</ul>
+			</div>
+			<div class=form>
+				<form action="{{ url_for('predictsingle')}}" method="post">
+					<div class="input-fields">
+							<input type="number" name="age" class="input" placeholder="Age in days" required="required" min="0"/> </br>
+							<input type="number" name="height" class="input" placeholder="Height in cm" required="required" min="0"/> </br>
+							<input type="number" name="weight" class="input" placeholder="Weight in kg" required="required" min="0"/> </br>
+							<input type="number" name="ap_hi" class="input" placeholder="Systolic blood pressure" required="required" min="0"/> </br>
+							<input type="number" name="ap_lo" class="input" placeholder="Diastolic blood pressure" required="required" min="0"/> </br>
+					</div>
+					<div class="container">
+							<h4>Select your gender</h4></br>
+											<input type="radio" id="1" value="1" name="Gender" required="required">
+											<label for="1">Male</label>
+											<input type="radio" id="2" value="2" name="Gender">
+											<label for="2">Female</label></br></br>
+						<h4>Do you smoke</label></h4></br>
+											<input type="radio" name="smoke" value="0" id="3" required="required">
+											<label for="3">No</label>
+											<input type="radio" name="smoke" value="1" id="4" >
+											<label for="4">Yes</label></br></br>
+						<h4>Do you consume alcohol</h4></br>
+											<input type="radio" name="alco" value="0" id="5" required="required">
+											<label for="5">No</label>
+											<input type="radio" name="alco"  value="1" id="6" >
+											<label for="6">Yes</label></br></br>
+						<h4>Are you physically active</h4></br>
+											<input type="radio" name="active" value="0" id="7" required="required">
+											<label for="7">No</label>
+											<input type="radio" name="active" value="1" id="8" >
+											<label for="8">Yes</label></br></br>
+						<h4>Your glucose level</h4></br>
+											<input type="radio" name="gluc" value="1" id="9" required="required">
+											<label for="9">Normal</label>
+											<input type="radio" name="gluc" value="2" id="10">
+											<label for="10">Above Normal</label>
+											<input type="radio" name="gluc" value="3" id="11">
+											<label for="11">Well above Normal</label></br></br>
+						<h4>Your cholestrol level</h4></br>
+											<input type="radio" name="chol" value="1" id="12" required="required">
+											<label for="12">Normal</label>
+											<input type="radio" name="chol"  value="2" id="13">
+											<label for="13">Above Normal</label>
+											<input type="radio" name="chol" value="3" id="14">
+											<label for="14">Well above Normal</label></br></br>
+					</div>
+					<div >
+						<button type="submit" id="Predict" class="button">Predict</button>
+					</div>
+				</form>
+			</center>
+		</div>
+	</body>
+</html>

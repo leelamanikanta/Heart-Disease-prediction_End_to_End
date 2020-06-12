@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html >
+<head>
+  <meta charset="UTF-8">
+  <title>Diabetes prediction</title>
+<link rel="stylesheet" href="/static/style.css" type="text/css">
+</head>
+<body>
+ <div class="main">
+	<center><h1>HEART DISEASE PREDICTION</h1>
+	<div class="row">
+		<ul class="main-nav">
+		<li><a class="active" href="{{ url_for('homePage')}}">Single Patient</a></li>
+		<li><a class="active" href="{{ url_for('bulkpredict')}}">Many Patients</a></li>
+		</ul>
+	</div>
+	<br><form action = "{{ url_for('upload_csv')}}" method = "POST" enctype = "multipart/form-data">
+			<div>
+			<input type="file"  name="data" required="required" class="button">
+			</div>
+			<div>
+            <button type="submit" class="button">Upload and Predict</button>
+			<div>
+        </form>
+</center>
+ </div>
+</body>
+</html>

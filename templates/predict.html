@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html >
+<head>
+  <meta charset="UTF-8">
+  <title>Diabetes prediction</title>
+<link rel="stylesheet" href="/static/style.css" type="text/css">
+</head>
+<body>
+ <div class="main">
+	<center><h1>HEART DISEASE PREDICTION</h1>
+	<br>
+	<div class="row">
+		<ul class="main-nav">
+		<li><a class="active" href="{{ url_for('homePage')}}">Single Patient</a></li>
+		<li><a class="active" href="{{ url_for('bulkpredict')}}">Many Patients</a></li>
+		</ul>
+	</div>
+	<br>
+    <p style="font-size:15px">{{ prediction }} </p>
+</center>
+ </div>	
+</body>
+</html>
