@@ -6,4 +6,4 @@ It can predict heart disease for single as well as multiple patients
 
 Live here: https://heartdiseasepredictionapp.herokuapp.com/  (Cold start)
 
-<img srC="static/UI.PNG">
+<img srC="static/ui.png">
