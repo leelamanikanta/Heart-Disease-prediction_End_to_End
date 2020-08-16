@@ -1,4 +1,4 @@
-# Heart-Disease-prediction---End-to-End-
+# Heart-Disease-prediction---End-to-End
 
 End to model for Heart Disease prediction.
 
